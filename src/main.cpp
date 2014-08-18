@@ -4,19 +4,17 @@
 using namespace std;
 
 int main(int argc, char* argv[]) {
-	Node a(1);
+	Node a(1),b(2),c(3),d(4),e(6);
 	tree t(&a);
+	t.add_left(&b,&a);
+	t.add_right(&c,&a);
+	t.add_left(&d,&b);
+	t.add_right(&e,&b);
 
-	a.left(new Node(2));
-	a.right(new Node(3));
+	cout<< "b and c are siblings or not : " <<t.is_sibling(&b,&c);
 
-	a.left()->left(new Node(4));
-	a.left()->right(new Node(5));
 
-	try{
-		cout << t.height() << endl;
-	} catch(char const *error) {
-		cout << error << endl;
-	}
+
+
 	return 0;
 }

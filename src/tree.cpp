@@ -62,3 +62,20 @@ void tree::create_level(){
 	}
 	
 }
+
+void tree::add_left(Node* a,Node* p){
+	p->left(a);
+	a->parent(p);
+}
+
+void tree::add_right(Node* b,Node* p){
+	p->right(b);
+	b->parent(p);
+}
+
+bool tree::is_sibling(Node* a,Node* b){
+	return a->parent() == b->parent();
+}
+bool tree::is_cousin(Node* a,Node* b){
+	return (islevel(a,b) && !is_sibling(a,b));
+}
