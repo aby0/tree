@@ -29,7 +29,7 @@ TARGET := $(OUTPUT)/a.out
 SRCEXT := cpp
 
 # Compiler flags
-CFLAGS :=  -g -Wall #-D debug=1
+CFLAGS := -std=c++11 -g -Wall #-D debug=1
 
 # Include libraries 
 LIB := 

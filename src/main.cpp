@@ -13,7 +13,10 @@ int main(int argc, char* argv[]) {
 	a.left()->left(new Node(4));
 	a.left()->right(new Node(5));
 
-	cout << t.height() << endl;
-
+	try{
+		cout << t.height() << endl;
+	} catch(char const *error) {
+		cout << error << endl;
+	}
 	return 0;
 }

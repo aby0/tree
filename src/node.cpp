@@ -4,16 +4,13 @@ Node::Node(){
 
 }
 
-Node::Node(int d){
-	Node(d,NULL);
+Node::Node(int d):Node(d,NULL){
 }
 
-Node::Node(int d,Node *l, Node *r){
-	Node(d,NULL,l,r);
+Node::Node(int d,Node *l, Node *r):Node(d,NULL,l,r){
 } // Data, Left and Right
 
-Node::Node(int d,Node *p){
-	Node(d,p,NULL,NULL);
+Node::Node(int d,Node *p):Node(d,p,NULL,NULL){
 }// Data and Parent
 	
 Node::Node(int d,Node *p, Node *l, Node *r){
@@ -30,7 +27,7 @@ int Node::data(){
 }
 
 void Node::data(int d){
-	Node *n = new Node(d);
+	_data = d;
 }
 
 Node * Node::left(){

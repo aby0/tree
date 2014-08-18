@@ -2,8 +2,7 @@
 
 using namespace std;
 
-tree::tree() {
-	tree(NULL);
+tree::tree():tree(NULL){
 }
 
 tree::tree(Node *n){
@@ -17,7 +16,7 @@ Node* tree::bfs(Node* find = NULL) {
 	q.enqueue(root);
 	root->height(0);
 	Node* n = NULL;
-	while(q.count() != 0) {
+	while(q.count() > 0) {
 		n = q.dequeue();
 		if(find && find->data() == n->data()) return n;
 		if(n->left()) {

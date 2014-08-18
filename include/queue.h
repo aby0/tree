@@ -13,7 +13,6 @@ public:
 	int count();
 private:
 	List q;
-	int _count;
 };
 
 #endif
